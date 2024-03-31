@@ -1,6 +1,6 @@
 # VeggieVibe Application
 
-## Welcome to Saladify, your go-to app for all things salad-related! your one-stop destination for exploring, customizing, and ordering a wide variety of delicious salads.
+### Welcome to Saladify, your go-to app for all things salad-related! your one-stop destination for exploring, customizing, and ordering a wide variety of delicious salads.
 
 ## => Facilities :
 

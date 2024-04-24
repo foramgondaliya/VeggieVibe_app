@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import '../utils/global_data.dart';
 import '../utils/allproductdata.dart';
+
 class homePage extends StatefulWidget {
   const homePage({Key? key});
 
@@ -13,13 +14,13 @@ class homePage extends StatefulWidget {
 class _homePageState extends State<homePage> {
   bool isLiked = false;
   String? dropDown;
-  bool istapped=false;
+  bool istapped = false;
   dynamic salad;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.only(left: 16,right: 16),
+        padding: const EdgeInsets.only(left: 16, right: 16),
         child: Container(
           //color: Colors.grey,
           child: Column(
@@ -30,28 +31,28 @@ class _homePageState extends State<homePage> {
                   margin: EdgeInsets.only(top: 10),
                   child: Row(
                     children: [
-                      Icon(Icons.location_on,
+                      Icon(
+                        Icons.location_on,
                       ),
-                      Text("Habiganj City",
+                      Text(
+                        "Habiganj City",
                         style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold
-                        ),
+                            fontSize: 18, fontWeight: FontWeight.bold),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 170),
+                        padding: const EdgeInsets.only(left: 210),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Container(
-                              width : 40,
+                              width: 40,
                               height: 40,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(500),
                                 color: Colors.grey.shade200,
                               ),
                               child: GestureDetector(
-                                onTap: (){
+                                onTap: () {
                                   Navigator.of(context).pushNamed('cart_page');
                                 },
                                 child: Icon(
@@ -62,8 +63,9 @@ class _homePageState extends State<homePage> {
                             Row(
                               children: [
                                 GestureDetector(
-                                  onTap:(){
-                                    Navigator.of(context).pushNamed('favorite_page');
+                                  onTap: () {
+                                    Navigator.of(context)
+                                        .pushNamed('favorite_page');
                                   },
                                   child: Icon(
                                     Icons.favorite_border,
@@ -73,7 +75,6 @@ class _homePageState extends State<homePage> {
                             ),
                           ],
                         ),
-
                       ),
                     ],
                   ),
@@ -83,7 +84,7 @@ class _homePageState extends State<homePage> {
               Expanded(
                 flex: 3,
                 child: Container(
-                  margin: EdgeInsets.only(top: 10),
+                  margin: EdgeInsets.only(top: 10, left: 8),
                   child: Column(
                     children: [
                       Row(
@@ -92,7 +93,7 @@ class _homePageState extends State<homePage> {
                             text: TextSpan(
                               children: <TextSpan>[
                                 TextSpan(
-                                  text:"Find the ",
+                                  text: "Find the ",
                                   style: TextStyle(
                                     fontSize: 30,
                                     color: Colors.black,
@@ -120,7 +121,7 @@ class _homePageState extends State<homePage> {
                             text: TextSpan(
                               children: <TextSpan>[
                                 TextSpan(
-                                  text:"Food ",
+                                  text: "Food ",
                                   style: TextStyle(
                                     fontSize: 30,
                                     fontWeight: FontWeight.w900,
@@ -147,7 +148,7 @@ class _homePageState extends State<homePage> {
                         children: [
                           Container(
                             height: 55,
-                            width: 375,
+                            width: 400,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(30),
                               color: Colors.grey.shade300,
@@ -163,11 +164,11 @@ class _homePageState extends State<homePage> {
                                     ),
                                     Padding(
                                       padding: const EdgeInsets.only(left: 10),
-                                      child: Text("Search your favourite food",
+                                      child: Text(
+                                        "Search your favourite food",
                                         style: TextStyle(
                                             fontSize: 15,
-                                            color: Colors.grey.shade700
-                                        ),
+                                            color: Colors.grey.shade700),
                                       ),
                                     ),
                                   ],
@@ -188,77 +189,75 @@ class _homePageState extends State<homePage> {
                 child: Container(
                   alignment: Alignment.topLeft,
                   //color: Colors.blueAccent,
-                  child:Column(
+                  child: Column(
                     children: [
-                      Row(
-                        children: [
-                          RichText(
-                            text: const TextSpan(
-                              children: <TextSpan>[
-                                TextSpan(
-                                  text:"Find  ",
-                                  style: TextStyle(
-                                      fontSize: 26,
-                                      color: Colors.black,
+                      Padding(
+                        padding: const EdgeInsets.only(left: 15),
+                        child: Row(
+                          children: [
+                            RichText(
+                              text: const TextSpan(
+                                children: <TextSpan>[
+                                  TextSpan(
+                                    text: "Find  ",
+                                    style: TextStyle(
+                                        fontSize: 26,
+                                        color: Colors.black,
+                                        letterSpacing: 1,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  TextSpan(
+                                    text: "5km ",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 19,
+                                      color: Colors.red,
                                       letterSpacing: 1,
-                                      fontWeight: FontWeight.bold
+                                    ),
                                   ),
-                                ),
-                                TextSpan(
-                                  text: "5km ",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 19,
-                                    color: Colors.red,
-                                    letterSpacing: 1,
-                                  ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
-                          ),
-                          Icon(Icons.arrow_forward_ios,
-                            size: 15,
-                            color: Colors.red,
-                          )
-                        ],
+                            Icon(
+                              Icons.arrow_forward_ios,
+                              size: 15,
+                              color: Colors.red,
+                            )
+                          ],
+                        ),
                       ),
                       SizedBox(height: 20),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          (istapped==true)
+                          (istapped == true)
                               ? GestureDetector(
-                            onTap: (){
-                              setState(() {
-                                salad=null;
-                              });
-                            },
-                            child: GlobalData.button(
-                              text: "Salads",
-                            ),
-                          )
-                              :Container(
-                            height: 45,
-                            // decoration: BoxDecoration(
-                            //   color: Colors.green,
-                            //   shape: BoxShape.rectangle,
-                            //   borderRadius: BorderRadius.all(Radius.circular(40)),
-                            // ),
-                            child: GestureDetector(
-                              onTap: (){
-                                setState(() {
-                                  salad=null;
-                                });
-                              },
-                              child: GlobalData.button(
-                                text: 'Salads',
-                              ),
-                            ),
-                          ),
+                                  onTap: () {
+                                    setState(() {
+                                      salad = null;
+                                    });
+                                  },
+                                  child: GlobalData.button(
+                                    text: "Salads",
+                                  ),
+                                )
+                              : Container(
+                                  height: 45,
+                                  child: GestureDetector(
+                                    onTap: () {
+                                      setState(() {
+                                        salad = null;
+                                      });
+                                    },
+                                    child: GlobalData.button(
+                                      text: 'Salads',
+                                    ),
+                                  ),
+                                ),
                           GestureDetector(
-                            onTap: (){
+                            onTap: () {
                               setState(() {
-                                salad="Hot sale";
+                                salad = "Hot sale";
                               });
                             },
                             child: GlobalData.button(
@@ -266,9 +265,9 @@ class _homePageState extends State<homePage> {
                             ),
                           ),
                           GestureDetector(
-                            onTap: (){
+                            onTap: () {
                               setState(() {
-                                salad="Popularity";
+                                salad = "Popularity";
                               });
                             },
                             child: GlobalData.button(
@@ -287,203 +286,285 @@ class _homePageState extends State<homePage> {
                   child: Column(
                     children: [
                       ...ProductData.allProductsData.map(
-                            (e) =>
-                            Container(
-                              margin: EdgeInsets.only(bottom: 20),
-                              height: 300,
-                              width: 450,
-                              child: Row(
-                                children: [
-                                  ...e
-                                  ['data']
-                                      .map((Map<String,dynamic>e){
-                                    return (e['category']==salad || salad==null)
-                                        ? Expanded(
-                                      child: GestureDetector(
-                                        onTap: (){
-                                          Navigator.of(context).pushNamed('product_detailPage',arguments: e);
-                                        },
-                                        child: Container(
-                                          padding: EdgeInsets.only(right: 5,left: 5),
-                                          margin: EdgeInsets.only(right: 5,left: 5),
-                                          child: Column(
-                                            children: [
-                                              Expanded(
-                                                flex: 3,
-                                                child: Container(
-                                                  decoration: BoxDecoration(
-                                                    borderRadius: BorderRadius.only(
-                                                      topLeft: Radius.circular(25),
-                                                      topRight: Radius.circular(25),
-                                                    ),
-                                                    color: Colors.grey.shade300,
-                                                  ),
-                                                  child: Column(
-                                                    crossAxisAlignment: CrossAxisAlignment.end,
-                                                    children: [
-                                                      Padding(
-                                                        padding: const EdgeInsets.only(top: 9,right: 9),
-                                                        child: GestureDetector(
-                                                          onTap: (){
-                                                            setState(() {
-                                                             // isLiked = !isLiked;
-                                                              ProductData.favData.add(e);
-                                                              ProductData.convertData();
-                                                            });
-                                                          },
-                                                          child: Icon(
-                                                                Icons.favorite_border,
-                                                          ),
+                        (e) => Container(
+                          margin: EdgeInsets.only(bottom: 20),
+                          height: 300,
+                          width: 450,
+                          child: Row(
+                            children: [
+                              ...e['data'].map(
+                                (Map<String, dynamic> e) {
+                                  return (e['category'] == salad ||
+                                          salad == null)
+                                      ? Expanded(
+                                          child: GestureDetector(
+                                            onTap: () {
+                                              Navigator.of(context).pushNamed(
+                                                  'product_detailPage',
+                                                  arguments: e);
+                                            },
+                                            child: Container(
+                                              padding: EdgeInsets.only(
+                                                  right: 5, left: 5),
+                                              margin: EdgeInsets.only(
+                                                  right: 5, left: 5),
+                                              child: Column(
+                                                children: [
+                                                  Expanded(
+                                                    flex: 3,
+                                                    child: Container(
+                                                      decoration: BoxDecoration(
+                                                        borderRadius:
+                                                            BorderRadius.only(
+                                                          topLeft:
+                                                              Radius.circular(
+                                                                  25),
+                                                          topRight:
+                                                              Radius.circular(
+                                                                  25),
                                                         ),
+                                                        color: Colors
+                                                            .grey.shade300,
                                                       ),
-                                                      Container(
-                                                        alignment: Alignment.center,
-                                                        child: CircleAvatar(
-                                                          radius: 65,
-                                                          foregroundImage: NetworkImage(
-                                                            "${e['thumbnail']}",
-                                                          ),
-
-                                                        ),
-                                                      )
-                                                    ],
-                                                  ),
-                                                ),
-                                              ),
-                                              Expanded(
-                                                flex: 2,
-                                                child: Container(
-                                                  decoration: BoxDecoration(
-                                                    borderRadius: BorderRadius.only(
-                                                      bottomLeft: Radius.circular(25),
-                                                      bottomRight: Radius.circular(25),
-                                                    ),
-                                                    color: Colors.grey.shade300,
-                                                  ),
-                                                  child: Column(
-                                                    children: [
-                                                      Row(
-                                                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                                      child: Column(
+                                                        crossAxisAlignment:
+                                                            CrossAxisAlignment
+                                                                .end,
                                                         children: [
-                                                          Text(
-                                                            "${e['title']}",
-                                                            style: TextStyle(
-                                                                fontSize: 20,
-                                                                fontWeight: FontWeight.bold
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .only(
+                                                                    top: 9,
+                                                                    right: 9),
+                                                            child:
+                                                                GestureDetector(
+                                                              onTap: () {
+                                                                setState(() {
+                                                                  e['like'] =
+                                                                      !e['like'];
+                                                                  ProductData
+                                                                      .favData
+                                                                      .add(e);
+                                                                  ProductData
+                                                                      .convertData();
+                                                                });
+                                                              },
+                                                              child: Icon(
+                                                                e['like']
+                                                                    ? Icons
+                                                                        .favorite
+                                                                    : Icons
+                                                                        .favorite_border,
+                                                                color: e['like']
+                                                                    ? Colors.red
+                                                                    : Colors
+                                                                        .black,
+                                                              ),
                                                             ),
                                                           ),
+                                                          Container(
+                                                            alignment: Alignment
+                                                                .center,
+                                                            child: CircleAvatar(
+                                                              radius: 65,
+                                                              foregroundImage:
+                                                                  NetworkImage(
+                                                                "${e['thumbnail']}",
+                                                              ),
+                                                            ),
+                                                          )
                                                         ],
                                                       ),
-                                                      Row(
-                                                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                                    ),
+                                                  ),
+                                                  Expanded(
+                                                    flex: 2,
+                                                    child: Container(
+                                                      decoration: BoxDecoration(
+                                                        borderRadius:
+                                                            BorderRadius.only(
+                                                          bottomLeft:
+                                                              Radius.circular(
+                                                                  25),
+                                                          bottomRight:
+                                                              Radius.circular(
+                                                                  25),
+                                                        ),
+                                                        color: Colors
+                                                            .grey.shade300,
+                                                      ),
+                                                      child: Column(
                                                         children: [
-                                                          Text(
-                                                            "${e['time']}",
-                                                            style: TextStyle(
-                                                                fontSize: 18,
-                                                                fontWeight: FontWeight.bold,
-                                                                color: Colors.grey
-                                                            ),
-                                                          ),
                                                           Row(
+                                                            mainAxisAlignment:
+                                                                MainAxisAlignment
+                                                                    .spaceAround,
                                                             children: [
-                                                              Icon(Icons.star_border,
-                                                                color: Colors.amber,
-                                                                size: 20,
-                                                              ),
                                                               Text(
-                                                                "${e['rating']}",
+                                                                "${e['title']}",
                                                                 style: TextStyle(
-                                                                  fontSize: 18,
-                                                                  fontWeight: FontWeight.bold,
-                                                                  color: Colors.grey,
-                                                                ),
+                                                                    fontSize:
+                                                                        20,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .bold),
                                                               ),
                                                             ],
                                                           ),
-                                                        ],
-                                                      ),
-                                                      Padding(
-                                                        padding: const EdgeInsets.only(top: 28),
-                                                        child: Row(
-                                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                          children: [
-                                                            Padding(
-                                                              padding: const EdgeInsets.only(left: 25),
-                                                              child: Text(
-                                                                "${e['price']}",
+                                                          Row(
+                                                            mainAxisAlignment:
+                                                                MainAxisAlignment
+                                                                    .spaceAround,
+                                                            children: [
+                                                              Text(
+                                                                "${e['time']}",
                                                                 style: TextStyle(
-                                                                    fontSize: 20,
-                                                                    fontWeight: FontWeight.bold
-                                                                ),
+                                                                    fontSize:
+                                                                        18,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .bold,
+                                                                    color: Colors
+                                                                        .grey),
                                                               ),
-                                                            ),
-                                                            (e['count']==0) ? GestureDetector(
-                                                              onTap: (){
-                                                                setState(() {
-                                                                  ProductData.cartData.add(e);
-                                                                  ProductData.convertUniiqueData();
-                                                                  e['count']++;
-                                                                });
-                                                              },
-                                                              child: Container(
-                                                                alignment: Alignment.bottomRight,
-                                                                height: 37,
-                                                                width: 37,
-                                                                decoration: BoxDecoration(
-                                                                    color: Colors.green,
-                                                                    borderRadius: BorderRadius.only(
-                                                                      bottomRight: Radius.circular(15),
-                                                                      topLeft: Radius.circular(15),
-                                                                    )
-                                                                ),
-                                                                child: Padding(
-                                                                  padding: const EdgeInsets.only(right: 7,bottom: 6),
-                                                                  child: Icon(Icons.add,
-                                                                    color: Colors.white,
-                                                                    size: 22,
+                                                              Row(
+                                                                children: [
+                                                                  Icon(
+                                                                    Icons
+                                                                        .star_border,
+                                                                    color: Colors
+                                                                        .amber,
+                                                                    size: 20,
+                                                                  ),
+                                                                  Text(
+                                                                    "${e['rating']}",
+                                                                    style:
+                                                                        TextStyle(
+                                                                      fontSize:
+                                                                          18,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .bold,
+                                                                      color: Colors
+                                                                          .grey,
+                                                                    ),
+                                                                  ),
+                                                                ],
+                                                              ),
+                                                            ],
+                                                          ),
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .only(
+                                                                    top: 28),
+                                                            child: Row(
+                                                              mainAxisAlignment:
+                                                                  MainAxisAlignment
+                                                                      .spaceBetween,
+                                                              children: [
+                                                                Padding(
+                                                                  padding:
+                                                                      const EdgeInsets
+                                                                          .only(
+                                                                          left:
+                                                                              25),
+                                                                  child: Text(
+                                                                    "${e['price']}",
+                                                                    style: TextStyle(
+                                                                        fontSize:
+                                                                            20,
+                                                                        fontWeight:
+                                                                            FontWeight.bold),
                                                                   ),
                                                                 ),
-
-                                                              ),
-                                                            )
-                                                                : Container(
-                                                              alignment: Alignment.bottomRight,
-                                                              height: 37,
-                                                              width: 37,
-                                                              decoration: BoxDecoration(
-                                                                  color: Colors.green,
-                                                                  borderRadius: BorderRadius.only(
-                                                                    bottomRight: Radius.circular(15),
-                                                                    topLeft: Radius.circular(15),
-                                                                  )
-                                                              ),
-                                                              child: Padding(
-                                                                padding: const EdgeInsets.only(right: 7,bottom: 6),
-                                                                child: Icon(Icons.done,
-                                                                  color: Colors.white,
-                                                                  size: 22,
-                                                                ),
-                                                              ),
-
+                                                                (e['count'] ==
+                                                                        0)
+                                                                    ? GestureDetector(
+                                                                        onTap:
+                                                                            () {
+                                                                          setState(
+                                                                              () {
+                                                                            ProductData.cartData.add(e);
+                                                                            ProductData.convertUniiqueData();
+                                                                            e['count']++;
+                                                                          });
+                                                                        },
+                                                                        child:
+                                                                            Container(
+                                                                          alignment:
+                                                                              Alignment.bottomRight,
+                                                                          height:
+                                                                              37,
+                                                                          width:
+                                                                              37,
+                                                                          decoration: BoxDecoration(
+                                                                              color: Colors.green,
+                                                                              borderRadius: BorderRadius.only(
+                                                                                bottomRight: Radius.circular(15),
+                                                                                topLeft: Radius.circular(15),
+                                                                              )),
+                                                                          child:
+                                                                              Padding(
+                                                                            padding:
+                                                                                const EdgeInsets.only(right: 7, bottom: 6),
+                                                                            child:
+                                                                                Icon(
+                                                                              Icons.add,
+                                                                              color: Colors.white,
+                                                                              size: 22,
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                      )
+                                                                    : Container(
+                                                                        alignment:
+                                                                            Alignment.bottomRight,
+                                                                        height:
+                                                                            37,
+                                                                        width:
+                                                                            37,
+                                                                        decoration: BoxDecoration(
+                                                                            color: Colors.green,
+                                                                            borderRadius: BorderRadius.only(
+                                                                              bottomRight: Radius.circular(15),
+                                                                              topLeft: Radius.circular(15),
+                                                                            )),
+                                                                        child:
+                                                                            Padding(
+                                                                          padding: const EdgeInsets
+                                                                              .only(
+                                                                              right: 7,
+                                                                              bottom: 6),
+                                                                          child:
+                                                                              Icon(
+                                                                            Icons.done,
+                                                                            color:
+                                                                                Colors.white,
+                                                                            size:
+                                                                                22,
+                                                                          ),
+                                                                        ),
+                                                                      ),
+                                                              ],
                                                             ),
-                                                          ],
-                                                        ),
+                                                          ),
+                                                        ],
                                                       ),
-                                                    ],
+                                                    ),
                                                   ),
-                                                ),
+                                                ],
                                               ),
-                                            ],
+                                            ),
                                           ),
-                                        ),
-                                      ),
-                                    )
-                                        : Container();
-                                  },),
-                                ],
+                                        )
+                                      : Container();
+                                },
                               ),
-                            ),
+                            ],
+                          ),
+                        ),
                       ),
                     ],
                   ),

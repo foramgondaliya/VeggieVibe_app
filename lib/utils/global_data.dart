@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+import 'package:path_provider/path_provider.dart';
+import 'package:pdf/pdf.dart';
+import 'package:pdf/widgets.dart' as pw;
+
 class GlobalData {
   static button({required String text}) {
     return Container(
@@ -19,6 +23,7 @@ class GlobalData {
       ),
     );
   }
+
   static button2({required dynamic icons}) {
     return Container(
       height: 25,
@@ -36,4 +41,7 @@ class GlobalData {
     );
   }
 
+  static String pdfName = "Veggievibe";
+  PdfColor pdfPrimaryBlack = PdfColors.green;
+  PdfColor pdfPrimaryGreen = PdfColors.green900;
 }

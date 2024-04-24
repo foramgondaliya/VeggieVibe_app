@@ -1,6 +1,6 @@
 # VeggieVibe Application
 
-## Welcome to Saladify, your go-to app for all things salad-related! your one-stop destination for exploring, customizing, and ordering a wide variety of delicious salads.
+### Welcome to Saladify, your go-to app for all things salad-related! your one-stop destination for exploring, customizing, and ordering a wide variety of delicious salads.
 
 ## => Facilities :
 
@@ -26,4 +26,21 @@ ratings and reviews.
 ## Delivery Information: 
 
 You can get information about delivery charges, average time to reach your home, and 
-estimated arrival times. 
+estimated arrival times.
+
+
+
+
+
+https://github.com/foramgondaliya/VeggieVibe_app/assets/149999919/624d4167-c019-421b-af53-4db7833cfcb5
+
+
+![Screenshot_20240401_014328](https://github.com/foramgondaliya/VeggieVibe_app/assets/149999919/b2cdc24e-5279-4ef1-9641-c86f2640f5c6)
+![Screenshot_20240401_014616](https://github.com/foramgondaliya/VeggieVibe_app/assets/149999919/8f376be5-bd3f-4a5f-9283-3a98b77a2412)
+![Screenshot_20240401_014917](https://github.com/foramgondaliya/VeggieVibe_app/assets/149999919/026143b7-cf69-4207-a50e-74b6c24ec096)
+![Screenshot_20240401_090812](https://github.com/foramgondaliya/VeggieVibe_app/assets/149999919/4c650912-8825-4ad8-870f-eab5bf24bb35)
+
+
+
+
+

@@ -382,7 +382,7 @@ class ProductData {
   static num grandTotal() {
     num add = 0.0;
     for (var element in cartProductData) {
-      add = totalPrice() + element['delivery'] + taxTotal();
+      add = totalPrice() + element['delivery'];
     }
     return add;
   }
@@ -390,7 +390,7 @@ class ProductData {
   static num taxTotal() {
     num plus = 0.0;
     num tax = 18;
-    plus = (tax * totalPrice()) / 100;
+    plus = (tax * totalPrice()) / 100 + totalPrice();
     return plus;
   }
 }

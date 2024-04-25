@@ -7,7 +7,7 @@ import 'package:pdf/widgets.dart' as pw;
 class GlobalData {
   static button({required String text}) {
     return Container(
-      height: 45,
+      height: 47,
       width: 110,
       decoration: BoxDecoration(
         color: Colors.grey.shade300,

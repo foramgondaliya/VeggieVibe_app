@@ -39,6 +39,7 @@ https://github.com/foramgondaliya/VeggieVibe_app/assets/149999919/624d4167-c019-
 ![Screenshot_20240401_014616](https://github.com/foramgondaliya/VeggieVibe_app/assets/149999919/8f376be5-bd3f-4a5f-9283-3a98b77a2412)
 ![Screenshot_20240401_014917](https://github.com/foramgondaliya/VeggieVibe_app/assets/149999919/026143b7-cf69-4207-a50e-74b6c24ec096)
 ![Screenshot_20240401_090812](https://github.com/foramgondaliya/VeggieVibe_app/assets/149999919/4c650912-8825-4ad8-870f-eab5bf24bb35)
+![Screenshot_20240425_074451](https://github.com/foramgondaliya/VeggieVibe_app/assets/149999919/be161b44-eb32-43ab-bb37-bcaa455921d2)
 ![Screenshot_20240425_073512](https://github.com/foramgondaliya/VeggieVibe_app/assets/149999919/f77182e7-0bf4-491f-8f1b-6f456dcb318f)
 
 
